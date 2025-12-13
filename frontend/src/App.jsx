@@ -5,7 +5,10 @@ function App() {
 
   useEffect(() => {
     // Ajusta la URL luego según dónde corra el backend
-    fetch("http://localhost:4000/api/saludo")
+    //const API_URL = "https://backend-express-ci-cd.onrender.com";
+
+    //fetch("http://localhost:4000/api/saludo")
+    fetch("https://backend-express-ci-cd-latest-x0ae.onrender.com/" + "api/saludo")
       .then((res) => res.json())
       .then((data) => setMensaje(data.mensaje))
       .catch(() =>
